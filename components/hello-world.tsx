@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './hello-world.module.scss'
 
 export default function HelloWorld() {
