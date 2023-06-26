@@ -7,9 +7,12 @@
   },
   "dependencies": {
     "@gcba/obelisco": "^1.48.2",
+    "copy-to-clipboard": "^3.3.3",
     "next": "latest",
+    "pretty": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-toastify": "^9.1.3",
     "sass": "1.26.3"
   },
   "devDependencies": {
