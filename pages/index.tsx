@@ -1,13 +1,13 @@
 import React from "react";
 import { Hero } from "../components/Home/Hero";
 import Link from "next/link";
+import CodeEditor from "../src/components/codepen";
 
 export default function Home() {
   return (
     <article>
       <Hero />
-
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           <div className="col-12 col-lg-4 mb-4">
             <div className="group-access">
@@ -326,6 +326,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container pb-4">
+        <h2>Podes Probar nuestros componentes acá</h2>
+        <p className="mb-4">Usando la herramienta de obelisco podes maquetar en el siguiente editor y ver el resultado en tiempo real.</p>
+        <CodeEditor />
       </div>
     </article>
   );
