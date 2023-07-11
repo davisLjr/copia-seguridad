@@ -6,10 +6,12 @@ import 'prism-themes/themes/prism-dracula.css';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import styles from './CodeEditor.module.scss';
+import StorybookIframe from '../storybook-iframe';
 
 const CodeEditor: React.FC = () => {
   const [htmlCode, setHtmlCode] = useState('');
   const [cssCode, setCssCode] = useState('');
+  const [iframeCode, setIframeCode] = useState('');
   const [activeTab, setActiveTab] = useState('html');
   const [isResultExpanded, setIsResultExpanded] = useState(false);
 
@@ -19,6 +21,10 @@ const CodeEditor: React.FC = () => {
 
   const handleCssChange = (value: string) => {
     setCssCode(value);
+  };
+
+  const handleIframeChange = (value: string) => {
+    setIframeCode(value);
   };
 
   const handleTabClick = (tab: string) => {
@@ -34,7 +40,7 @@ const CodeEditor: React.FC = () => {
       <div className={`${styles.preStyle} ${styles.codeEditor}`}>
         <SimpleCodeEditor
           value={code}
-          onValueChange={language === 'html' ? handleHtmlChange : handleCssChange}
+          onValueChange={language === 'html' ? handleHtmlChange : (language === 'css' ? handleCssChange : handleIframeChange)}
           highlight={(code) => highlight(code, language === 'html' ? languages.html : languages.css)}
           padding={10}
           placeholder={`Ingrese su código ${language === 'html' ? 'HTML' : 'CSS'} aquí`}
@@ -83,7 +89,7 @@ const CodeEditor: React.FC = () => {
                   className={`nav-link ${activeTab === 'html' ? 'active' : ''}`}
                   onClick={() => handleTabClick('html')}
                 >
-                  index.html
+                  HTML
                 </button>
               </li>
               <li className="nav-item">
@@ -91,7 +97,15 @@ const CodeEditor: React.FC = () => {
                   className={`nav-link ${activeTab === 'css' ? 'active' : ''}`}
                   onClick={() => handleTabClick('css')}
                 >
-                  style.css
+                  CSS
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${activeTab === 'iframe' ? 'active' : ''}`}
+                  onClick={() => handleTabClick('iframe')}
+                >
+                  Storybook - Obelisco
                 </button>
               </li>
             </ul>
@@ -99,8 +113,10 @@ const CodeEditor: React.FC = () => {
 
           {activeTab === 'html' ? (
             renderCodeEditor('html', htmlCode)
-          ) : (
+          ) : activeTab === 'css' ? (
             renderCodeEditor('css', cssCode)
+          ) : (
+            <StorybookIframe />
           )}
         </div>
 
