@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Hero } from "../components/Home/Hero";
-import Link from "next/link";
-import CodeEditor from "../components/codepen/";
 import TabsSlider from "../components/TabsSilder";
 import AreaGob from "../components/Home/PageTypes/areaGob";
 import Form from "../components/Home/PageTypes/form";
@@ -10,9 +8,9 @@ import News from "../components/Home/PageTypes/news";
 import Area from "../components/Home/PageTypes/area";
 import BookPage from "../components/Home/PageTypes/bookPage";
 import Simple from "../components/Home/PageTypes/simple";
+import FloatButton from "../components/FloatButton";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState(0);
 
   const tabsData = [
     'Área de Gobierno',
@@ -67,15 +65,14 @@ export default function Home() {
       <Hero />
 
       <div className="container pb-5">
-        <h2 className="mb-4">Tipos de paginas</h2>
+        <h2 className="mb-0">Tipos de paginas</h2>
+        <p className="mb-5">Navegá por los diferentes tipos de paginas realizadas con buenas practicas usando la herramienta Obelisco.</p>
         <TabsSlider tabsData={tabsData} tabContents={tabContents} />
         {/* {tabContents[activeTab]} */}
       </div>
 
-      <div className="container py-5">
-        <h2>Probá nuestros componentes</h2>
-        <p className="mb-4">Usando la herramienta de obelisco podes maquetar en el siguiente editor y ver el resultado en tiempo real.</p>
-        <CodeEditor />
+      <div className="container">
+        <FloatButton />
       </div>
     </article>
   );

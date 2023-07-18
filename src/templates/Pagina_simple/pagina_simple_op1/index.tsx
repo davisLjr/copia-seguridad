@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "../../../../components/Layout/layouts";
 import { CopyButton } from "../../../../components/CopyButton";
+import FloatButton from "../../../../components/FloatButton";
 
 export default function SimpleOp1() {
   return (
@@ -230,6 +231,10 @@ export default function SimpleOp1() {
           </div>
         </div>
       </section>
+
+      <div className="container">
+        <FloatButton />
+      </div>
     </Layout>
   );
 };
