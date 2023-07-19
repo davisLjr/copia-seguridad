@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "../../../../components/Layout/layouts";
+import { CopyButton } from "../../../../components/CopyButton";
 
 export default function SimpleOp1() {
   return (
@@ -38,8 +39,13 @@ export default function SimpleOp1() {
           </div>
         </header>
 
-        <div className="container pb-3 mb-4">
-          <h2 className="mb-4">Actividad comercial</h2>
+        <div className="container pb-3 mb-4" id="seccion-uno-no-copiar">
+          <div className="d-flex">
+            <h2 className="mb-4">
+              Actividad comercial
+            </h2>
+            <CopyButton targetId="seccion-uno-no-copiar" />
+          </div>
           <div className="card-deck max-cards-3">
             <a className="card" href="#">
               <div className="card-body">
@@ -96,8 +102,13 @@ export default function SimpleOp1() {
           </div>
         </div>
 
-        <div className="container pb-3 mb-4">
-          <h2 className="mb-4">Administración de consorcios</h2>
+        <div className="container pb-3 mb-4" id="seccion-dos-no-copiar">
+          <div className="d-flex">
+            <h2 className="mb-4">
+              Administración de consorcios
+            </h2>
+            <CopyButton targetId="seccion-dos-no-copiar" />
+          </div>
           <div className="card-deck max-cards-3">
             <a className="card" href="#">
               <div className="card-body">
@@ -123,8 +134,13 @@ export default function SimpleOp1() {
           </div>
         </div>
 
-        <div className="container pb-3 mb-4">
-          <h2 className="mb-4">Educación</h2>
+        <div className="container pb-3 mb-4" id="seccion-tres-no-copiar">
+          <div className="d-flex">
+            <h2 className="mb-4">
+              Educación
+            </h2>
+            <CopyButton targetId="seccion-tres-no-copiar" />
+          </div>
           <div className="card-deck max-cards-3">
             <a className="card" href="#">
               <div className="card-body">
@@ -147,8 +163,13 @@ export default function SimpleOp1() {
           </div>
         </div>
 
-        <div className="container">
-          <h2 className="mb-4">Industrias creativas y software</h2>
+        <div className="container" id="seccion-cuatro-no-copiar">
+          <div className="d-flex">            
+            <h2 className="mb-4">
+              Industrias creativas y software
+            </h2>
+            <CopyButton targetId="seccion-cuatro-no-copiar" />  
+          </div>
           <div className="card-deck max-cards-3">
             <a className="card" href="#">
               <div className="card-body">
@@ -175,11 +196,15 @@ export default function SimpleOp1() {
           </div>
         </div>
       </article>
-      <section className="bg-light py-5">
+
+      <section className="bg-light py-5" id="seccion-cinco-no-copiar">
         <div className="container my-1 py-2">
-          <h2 className="mb-4">
-            Cancelá tus deudas y promové la reactivación productiva
-          </h2>
+          <div className="d-flex">
+            <h2 className="mb-4">
+              Cancelá tus deudas y promové la reactivación productiva
+            </h2>
+            <CopyButton targetId="seccion-cinco-no-copiar" />
+          </div>
           <div className="card-deck max-cards-3">
             <a className="card" href="#">
               <div className="card-body">

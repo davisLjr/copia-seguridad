@@ -1,13 +1,72 @@
 import React from "react";
 import { Hero } from "../components/Home/Hero";
 import Link from "next/link";
+import CodeEditor from "../src/components/codepen";
 
 export default function Home() {
   return (
     <article>
+    <header className="navbar navbar-light navbar-md">
+      <div className="container">
+        <a href="#" className="navbar-brand">
+        <img
+            className="header-logo"
+            src="https://gcba.github.io/Obelisco/header/LogoBA.svg"
+            alt="Logo de la ciudad de Buenos Aires"
+          />
+        </a>
+        <div className="navbar-search d-responsive ml-auto">
+          <form className="form-search form-search-sm">
+            <div className="form-group">
+              <input
+                type="search"
+                className="form-control form-control-sm input-search"
+                id="header-search-example-1"
+                name="header-search"
+                placeholder="Buscar..."
+                aria-label="Ingrese su búsqueda"
+              />
+              <button className="reset" type="reset"></button>
+            </div>
+          </form>
+        </div>
+        <button
+          className="navbar-toggler collapsed ml-2"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="nav nav-pills">
+            <li className="nav-item d-responsive">
+              <div className="navbar-search">
+                <form className="form-search form-search-sm">
+                  <div className="form-group">
+                    <input
+                      type="search"
+                      className="form-control form-control-sm input-search"
+                      id="header-search-example-2"
+                      name="header-search"
+                      placeholder="Buscar..."
+                      aria-label="Ingrese su búsqueda"
+                    />
+                    <button className="reset" type="reset"></button>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
       <Hero />
 
-      <div className="container">
+      <div className="container mt-4">
+        <h2 className="mb-4">Tipos de paginas</h2>
         <div className="row">
           <div className="col-12 col-lg-4 mb-4">
             <div className="group-access">
@@ -326,6 +385,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container pb-4">
+        <h2>Probá nuestros componentes</h2>
+        <p className="mb-4">Usando la herramienta de obelisco podes maquetar en el siguiente editor y ver el resultado en tiempo real.</p>
+        <CodeEditor />
       </div>
     </article>
   );
