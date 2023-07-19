@@ -13,7 +13,7 @@ export const CopyButton = ({ targetId }) => {
     copy(formattedContent);
 
     toast.success("HTML Copiado.", {
-      position: "bottom-right",
+      position: "bottom-center",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
