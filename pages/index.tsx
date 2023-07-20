@@ -9,6 +9,7 @@ import Area from "../components/Home/PageTypes/area";
 import BookPage from "../components/Home/PageTypes/bookPage";
 import Simple from "../components/Home/PageTypes/simple";
 import FloatButton from "../components/FloatButton";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -71,9 +72,18 @@ export default function Home() {
         {/* {tabContents[activeTab]} */}
       </div>
 
-      <div className="container">
-        <FloatButton />
+
+      <div className="container pb-5">
+        <h4>Seccion de prueba y maquetados</h4>
+
+        <Link
+          href="maqueta-test"
+          target="_blank"
+          >
+            Secretaría de innovación y transformación digital
+          </Link>
       </div>
+
     </article>
   );
 }
