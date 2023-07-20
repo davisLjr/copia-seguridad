@@ -3,7 +3,7 @@ import React from "react";
 
 const News = () => {
   return (
-    <div className="d-flex">
+    <div className="d-flex flex-wrap">
       <div className="col-12 col-lg-4 mb-4">
         <div className="group-access">
           <div className="card-access">

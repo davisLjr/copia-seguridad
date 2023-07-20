@@ -83,7 +83,7 @@ const CodeEditor: React.FC = () => {
       <div className="row">
         <div className="col-12 mb-4">
           <nav className="tabs-slider px-0">
-            <ul className="nav nav-pills tabs">
+            <ul className="nav nav-pills tabs m-0">
               <li className="nav-item mb-2">
                 <button
                   className={`nav-link ${activeTab === 'html' ? 'active' : ''}`}
@@ -105,7 +105,7 @@ const CodeEditor: React.FC = () => {
                   className={`nav-link ${activeTab === 'iframe' ? 'active' : ''}`}
                   onClick={() => handleTabClick('iframe')}
                 >
-                  Storybook - Obelisco
+                  Storybook
                 </button>
               </li>
             </ul>
