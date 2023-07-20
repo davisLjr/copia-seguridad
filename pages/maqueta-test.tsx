@@ -145,34 +145,33 @@ export default function Maqueta() {
 
         <div className="container pt-2">
           <div className="card-deck max-cards-3 card-column mb-5">
-            <div className="card card-simple">
+            <div className="card card-simple panel-sm">
+              <i className="bx bx-cog card-icon"></i>
               <div className="card-body">
-                <i className="bx bx-cog card-icon"></i>
-                <h4 className="card-title">Plataformas digitales</h4>
+                <h3 className="card-title">Plataformas digitales</h3>
                 <p className="card-text">
-                  Mantenemos las plataformas y damos soporte a las áreas de
-                  gobierno.
+                  Mantenemos las plataformas y damos soporte a las áreas de gobierno.
                 </p>
               </div>
             </div>
-            <div className="card card-simple">
+            <div className="card card-simple panel-sm">
+              <span className="material-icons-round card-icon">
+                design_services
+              </span>
               <div className="card-body">
-                <span className="material-icons-round card-icon">
-                  design_services
-                </span>
-                <h4 className="card-title">Experiencia Digital</h4>
+                <h3 className="card-title">Experiencia Digital</h3>
                 <p className="card-text">
                   Diseñamos estrategias y productos digitales para mejorar la
                   experiencia de los vecinos.
                 </p>
               </div>
             </div>
-            <div className="card card-simple">
+            <div className="card card-simple panel-sm">
+              <span className="material-icons-round card-icon">
+                checklist
+              </span>
               <div className="card-body">
-                <span className="material-icons-round card-icon">
-                  checklist
-                </span>
-                <h4 className="card-title">Estándares</h4>
+                <h3 className="card-title">Estándares</h3>
                 <p className="card-text">
                   Definimos los estándares necesarios para las webs y
                   aplicaciones de la familia BA.
@@ -185,7 +184,7 @@ export default function Maqueta() {
 
           <div className="card card-simple panel-horizontal">
             <img
-              src="https://gcba.github.io/img/card/homev1.svg"
+              src="https://buenosaires.gob.ar/sites/default/files/inline-images/BA%20CIUDAD%20BOTI_209-0_0.png"
               alt="descripción alternativa"
               className="card-img"
             />
@@ -219,7 +218,7 @@ export default function Maqueta() {
 
           <hr className="my-5" />
 
-          <div className="alert alert-success mb-5" role="alert">
+          {/* <div className="alert alert-success mb-5" role="alert">
             <p>
               <strong>Te estamos buscando.</strong>
               <br />
@@ -230,7 +229,7 @@ export default function Maqueta() {
               <br />
               <a href="#">Ingresá tu CV</a>.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <section className="bg-light py-5 mb-5">
@@ -426,13 +425,33 @@ export default function Maqueta() {
                 </a>
                 <a
                   className="card"
+                  href="https://gcba.github.io/obelisco-demo/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Enlace a templates de ejemplo."
+                >
+                  <img
+                    src="https://cdn.dribbble.com/users/6427200/screenshots/14732282/shot-01-dribbble-ba_4x.png"
+                    className="card-img-top"
+                    alt="descripción alternativa"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Obelisco</h4>
+                    <p className="card-text">
+                      Sitio web donde se muestran los componentes basados en el sistema de diseño Obelisco.
+                    </p>
+                  </div>
+                </a>
+                <a
+                  className="card"
                   href="https://documentosboletinoficial.buenosaires.gob.ar/publico/ck_PE-RES-MJGGC-SECITD-94-23-6626.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Enlace a resolución."
                 >
                   <img
-                    src="https://gcba.github.io/img/card/homev1.svg"
+                    /* src="https://gcba.github.io/img/card/homev1.svg" */
+                    src="https://www.aeroterra.com/content/dam/distributor-share/esri-ar/eventos/artistas-argentinos-miami/logo-gcba.jpg"
                     className="card-img-top"
                     alt="descripción alternativa"
                   />
@@ -444,30 +463,29 @@ export default function Maqueta() {
                     </p>
                   </div>
                 </a>
-                <a
-                  className="card"
-                  href="https://gcba.github.io/obelisco-demo/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Enlace a templates de ejemplo."
-                >
-                  <img
-                    src="https://gcba.github.io/img/card/homev1.svg"
-                    className="card-img-top"
-                    alt="descripción alternativa"
-                  />
-                  <div className="card-body">
-                    <h4 className="card-title">Obelisco</h4>
-                    <p className="card-text">
-                      Sitio web donde se muestran los componentes basados en el sistema de diseño Obelisco.
-                    </p>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
         </section>
+      </article>
 
+      <section className="pb-4">
+        <div className="bg-light">
+          <div className="container py-5 mb-5">
+            <div className="card card-simple panel-sm">
+              <div className="card-body">
+                <h3 className="card-title">Te estamos buscando!</h3>
+                <p className="card-text">¡Tu visión y tu experiencia tienen lugar! Conocé todas las oportunidades laborales que tenemos en la Secretaría de Innovación para vos. Dejanos tu CV y datos personales, ¡y sumate al equipo de innovadores!</p>
+              </div>
+              <div className="panel-footer">
+                <a type="button" className="btn btn-secondary btn-sm card-link">
+                  Ingresa tu CV
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
         <section className="container">
           <h2 className="mt-5 mb-4">Noticias</h2>
           <div className="card-deck max-cards-3 mb-5">
@@ -549,7 +567,7 @@ export default function Maqueta() {
         </section>
 
         <section className="container">
-          <div className="pt-4 mt-3">
+          <div className="pt-4 mt-3 mb-5">
             <hr className="pb-3" />
             <h2 className="mb-4 pt-3">Redes sociales</h2>
             <div className="list-group list-group-row mb-1">
@@ -574,7 +592,7 @@ export default function Maqueta() {
             </div>
           </div>
         </section>
-      </article>
+      {/* </article> */}
     </Layout>
   );
 }
