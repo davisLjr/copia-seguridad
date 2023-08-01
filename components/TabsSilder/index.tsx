@@ -8,7 +8,7 @@ const TabsSlider = ({ tabsData, tabContents }) => {
   
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
