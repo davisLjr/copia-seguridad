@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Hero.module.scss";
+import { ArrowFloating } from "../ArrowFloat";
 
 export const Hero = () => {
   const handleScroll = () => {
@@ -32,6 +33,7 @@ export const Hero = () => {
           className={`col-md-6 d-none d-md-block p-0 ${styles.heroImage}`}
         ></div>
       </div>
+      <ArrowFloating />
     </header>
   );
 };

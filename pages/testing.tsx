@@ -1,5 +1,5 @@
 import React from "react";
-import CodeEditor from "../src/components/codepen";
+import CodeEditor from "../components/codepen";
 
 
 export default function Application() {

@@ -1,4 +1,5 @@
 .customHeight{
+  position: relative;
   height: calc(100vh - 80px);
 
   @media (max-width: 976px) {
