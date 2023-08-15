@@ -52,8 +52,8 @@ const CodeEditor: React.FC = () => {
             backgroundColor: '#1a1830',
             color: 'white',
             overflow: 'auto',
-            borderRadius: '0.5rem',
-            minHeight: '400px',
+            borderRadius: '1rem',
+            minHeight: '300px',
           }}
         />
       </div>
@@ -123,7 +123,7 @@ const CodeEditor: React.FC = () => {
         <div className="col-md-12">
           <div className={styles.mainResult}>
             <div className="d-flex align-items-center">
-              <h3 className="mt-2 mb-2">Resultado</h3>
+              <h3 className="mt-2 mb-2">Preview</h3>
               <span
                 data-direction="bottom"
                 data-tooltip='Para una mejor visualización, utiliza el botón de expandir.'

@@ -1,4 +1,5 @@
 html, body {
+  overflow-x: hidden;
   scroll-behavior: smooth; /* Habilita el scroll suave en los navegadores que lo soportan */
   &::-webkit-scrollbar {
     width: 8px;
