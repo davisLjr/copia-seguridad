@@ -6,9 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@gcba/obelisco": "^1.50.0",
+    "@gcba/obelisco": "^1.51.0",
     "copy-to-clipboard": "^3.3.3",
     "dracula-prism": "^2.1.13",
+    "material-icons": "^1.13.9",
     "next": "latest",
     "pretty": "^2.0.0",
     "prism-themes": "^1.9.0",
