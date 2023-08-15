@@ -1,0 +1,19 @@
+.customHeight{
+  height: calc(100vh - 80px);
+
+  @media (max-width: 976px) {
+    height: calc(100vh - 71.6px);
+  }
+  
+  @media (max-width: 751px) {
+    height: calc(100vh - 51.6px);
+  }
+}
+
+.heroImage{
+  @extend .customHeight;
+  background-image: url('../../../public/assets/hero/hero.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
