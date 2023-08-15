@@ -72,4 +72,4 @@ const AreaGob = () => {
   );
 };
 
-export default AreaGob
+export default AreaGob;

@@ -5,8 +5,8 @@ import { ArrowFloating } from "../ArrowFloat";
 export const Hero = () => {
   const handleScroll = () => {
     window.scrollTo({
-      top: window.innerHeight, // Scroll hacia abajo de 100vh
-      behavior: "smooth", // Animación de scroll suave
+      top: window.innerHeight, 
+      behavior: "smooth",
     });
   };
   return (
