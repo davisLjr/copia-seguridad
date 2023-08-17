@@ -1,38 +1,37 @@
 .codeEditorWrapper {
-  height: 300px;
+  height: 34vh;
+  width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow-y: scroll;
+  outline: none;
 
   .preStyle {
-    color: white !important;
-    border-radius: 10px;
-
     pre {
       color: white !important;
     }
   }
-    /* Personalización de la barra de desplazamiento */
-    &::-webkit-scrollbar {
-      width: 8px;
-      background-color: #f5f5f5;
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      background-color: #888;
-      border-radius: 4px;
-    }
-  
-    &::-webkit-scrollbar-thumb:hover {
-      background-color: #555;
-    }
+  /* Personalización de la barra de desplazamiento */
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
 }
 
 .mainResult {
   .result {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px;
+    background: white;
     padding: 0rem;
-    max-height: 400px;
-    min-height: 400px;
+    height: 50vh;
     margin-top: 12px;
     overflow-y: scroll;
 
@@ -76,4 +75,8 @@
       background-color: #555;
     }
   }
+}
+
+.mainEditor {
+  position: relative;
 }

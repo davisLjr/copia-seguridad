@@ -65,9 +65,7 @@ export default function Home() {
 
         <Hero />
 
-        <div className="container">
-          <CodeEditor />
-        </div>
+        <CodeEditor />
         {/* 
         <div className="container pb-5">
           <h2 className="mb-0">Tipos de paginas</h2>
@@ -79,7 +77,7 @@ export default function Home() {
           <FloatButton />
         </div> */}
       </article>
-      <footer className="main-footer mt-5">
+      {/* <footer className="main-footer mt-5">
         <div className="container">
           <section>
             <h4>Redes de la ciudad</h4>
@@ -149,7 +147,7 @@ export default function Home() {
             </div>
           </section>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
