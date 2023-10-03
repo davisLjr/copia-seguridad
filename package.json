@@ -6,7 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@gcba/obelisco": "^1.52.3",
+    "@gcba/obelisco": "^1.52.4",
     "copy-to-clipboard": "^3.3.3",
     "dracula-prism": "^2.1.13",
     "material-icons": "^1.13.9",
