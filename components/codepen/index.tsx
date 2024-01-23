@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import SimpleCodeEditor from "react-simple-code-editor";
-import { highlight, languages } from "prismjs";
+import {highlight, languages} from "prismjs";
 import "prismjs/themes/prism.css";
 import "prism-themes/themes/prism-dracula.css";
 import "prismjs/components/prism-clike";
@@ -89,39 +89,39 @@ const CodeEditor: React.FC = () => {
       <style>{cssCode}</style>
       <div
         className="resultado"
-        dangerouslySetInnerHTML={{ __html: htmlCode }}
+        dangerouslySetInnerHTML={{__html: htmlCode}}
       ></div>
     </div>
   );
 
   return (
     <div className={`${styles.mainEditor}`}>
-      <div className="container">
-        <div className={styles.mainResult}>
+      <div className={styles.mainResult}>
+        <div className="d-flex justify-content-between">
           <div className="d-flex align-items-center">
-            <h3 className="mt-2 mb-2">Preview</h3>
+            <h3 className="mt-2 mb-2 text-white">Preview</h3>
             <span
-              data-direction="bottom"
+              data-direction="right"
               data-tooltip="Para una mejor visualización, utiliza el botón de expandir."
-              className="icon-box p-0 mt-2 ml-2"
+              className="icon-box p-0 mt-2 ml-2 text-info"
             >
               <span className="material-icons-round">help</span>
             </span>
-            {!isResultExpanded && (
-              <button
-                type="button"
-                className={`btn btn-outline-primary btn-sm btn-icon ml-2 ${styles.shut}`}
-                aria-label="Botón"
-                onClick={handleExpandResult}
-                title="expandir"
-              >
-                <span className="material-icons-round">open_in_full</span>
-              </button>
-            )}
           </div>
-
-          {renderResult()}
+          {!isResultExpanded && (
+            <button
+              type="button"
+              className={`btn btn-primary btn-sm btn-icon ml-2 ${styles.shut}`}
+              aria-label="Botón"
+              onClick={handleExpandResult}
+              title="expandir"
+            >
+              <span className="material-icons-round">open_in_full</span>
+            </button>
+          )}
         </div>
+
+        {renderResult()}
       </div>
 
       <div>
@@ -129,7 +129,9 @@ const CodeEditor: React.FC = () => {
           <ul className="nav nav-pills tabs m-0">
             <li className="nav-item mt-2">
               <button
-                className={`nav-link ${activeTab === "html" ? "active" : ""}`}
+                className={`nav-link text-white ${
+                  activeTab === "html" ? "active" : ""
+                }`}
                 onClick={() => handleTabClick("html")}
               >
                 HTML
@@ -137,7 +139,9 @@ const CodeEditor: React.FC = () => {
             </li>
             <li className="nav-item mt-2">
               <button
-                className={`nav-link ${activeTab === "css" ? "active" : ""}`}
+                className={`nav-link text-white ${
+                  activeTab === "css" ? "active" : ""
+                }`}
                 onClick={() => handleTabClick("css")}
               >
                 CSS
@@ -145,7 +149,9 @@ const CodeEditor: React.FC = () => {
             </li>
             <li className="nav-item mt-2">
               <button
-                className={`nav-link ${activeTab === "iframe" ? "active" : ""}`}
+                className={`nav-link text-white ${
+                  activeTab === "iframe" ? "active" : ""
+                }`}
                 onClick={() => handleTabClick("iframe")}
               >
                 Storybook

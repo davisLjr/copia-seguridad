@@ -1,17 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from './components/header/header';
-import { Footer } from './components/footer';
-import FloatButton from '../FloatButton';
+import {Header} from "./components/header/header";
+import {Footer} from "./components/footer";
 
-export const Layout = ({ children }) => {
+export const Layout = ({children}) => {
   return (
     <div>
       <Header />
       <main>{children}</main>
-      <div className="container">
-        <FloatButton />
-      </div>
+      <div className="container"></div>
       <Footer />
     </div>
   );

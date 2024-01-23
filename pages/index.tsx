@@ -1,153 +1,54 @@
 import React from "react";
-import { Hero } from "../components/Home/Hero";
-// import TabsSlider from "../components/TabsSilder";
-// import AreaGob from "../components/Home/PageTypes/areaGob";
-// import Form from "../components/Home/PageTypes/form";
-// import Institutional from "../components/Home/PageTypes/institutional";
-// import News from "../components/Home/PageTypes/news";
-// import Area from "../components/Home/PageTypes/area";
-// import BookPage from "../components/Home/PageTypes/bookPage";
-// import Simple from "../components/Home/PageTypes/simple";
-// import FloatButton from "../components/FloatButton";
+import {Hero} from "../components/Home/Hero";
 import CodeEditor from "../components/codepen";
+import Image from "next/image";
+import Panels from "../components/Panels";
+import TitleGlitch from "../components/TitleGlitch";
 
 export default function Home() {
-  // const tabsData = [
-  //   'Área de Gobierno',
-  //   'Formularios',
-  //   'Institucional',
-  //   'Noticias',
-  //   'Página de Área',
-  //   'Página de Libro',
-  //   'Página de Simple',
-
-  // ];
-
-  // Contenido correspondiente a cada pestaña
-  // const tabContents = [
-  //   <div>
-  //     <AreaGob />
-  //   </div>,
-  //   <div>
-  //     <Form />
-  //   </div>,
-  //   <div>
-  //     <Institutional />
-  //   </div>,
-  //   <div>
-  //     <News />
-  //   </div>,
-  //   <div>
-  //     <Area />
-  //   </div>,
-  //   <div>
-  //     <BookPage />
-  //   </div>,
-  //   <div>
-  //     <Simple />
-  //   </div>,
-  // ];
-
   return (
     <>
       <article>
-        <header className="navbar navbar-light navbar-md px-4">
+        <header>
           <div>
-            <a href="#" className="navbar-brand">
-              <img
-                className="header-logo  w-75"
-                src="https://gcba.github.io/estandares/obelisco.svg"
-                alt="Logo de la ciudad de Buenos Aires"
+            <a href="#" className="logo-header align-items-center d-flex">
+              <Image
+                src="/assets/header/codificacion.png"
+                alt="Logo del editor obelisco"
+                width={35}
+                height={35}
               />
+              Editor Obelisco
             </a>
           </div>
         </header>
-
         <Hero />
 
-        <CodeEditor />
-        {/* 
-        <div className="container pb-5">
-          <h2 className="mb-0">Tipos de paginas</h2>
-          <p className="mb-5">Navegá por los diferentes tipos de paginas realizadas con buenas practicas usando la herramienta Obelisco.</p>
-          <TabsSlider tabsData={tabsData} tabContents={tabContents} />
+        <TitleGlitch title="COMO SE USA" />
+
+        <div className="about-panels">
+          <Panels
+            title="Copiar el HTML"
+            description="El primer paso sería copiar el HTML que necesites, este puede ser proporcionado por un desarollador, o puedes conseguirlo en Storybook."
+            imageSrc="/assets/about/step-1.png"
+          />
+
+          <Panels
+            title="Colocar el HTML"
+            description="El segundo paso sería colocar el HTML previamente copiado, y usarlo en el editor online de esta pagina."
+            imageSrc="/assets/about/step-2.png"
+          />
+
+          <Panels
+            title="Editar el HTML"
+            description="Este seria el tercer y ultimo paso, a esta altura podras editar el HTML dependiendo de tus requerimientos y verificar los resultados visuales en tiempo real, garantizando que el codigo que usaras se vea de la manera correcta en todo momento. "
+            imageSrc="/assets/about/step-3.png"
+          />
         </div>
 
-        <div className="container">
-          <FloatButton />
-        </div> */}
+        <TitleGlitch title="EDITOR ONLINE" />
+        <CodeEditor />
       </article>
-      {/* <footer className="main-footer mt-5">
-        <div className="container">
-          <section>
-            <h4>Redes de la ciudad</h4>
-            <ul className="list-inline">
-              <li className="list-inline-item redes-items">
-                <a href="https://www.facebook.com/GCBA">
-                  <i className="bx bxl-facebook"></i>
-                  Facebook
-                </a>
-              </li>
-              <li className="list-inline-item redes-items">
-                <a href="https://www.instagram.com/buenosaires">
-                  <i className="bx bxl-instagram"></i>
-                  Instagram
-                </a>
-              </li>
-              <li className="list-inline-item redes-items">
-                <a href="https://twitter.com/gcba">
-                  <i className="bx bxl-twitter"></i>
-                  Twitter
-                </a>
-              </li>
-              <li className="list-inline-item redes-items">
-                <a href="https://www.youtube.com/user/GCBA">
-                  <i className="bx bxl-youtube"></i>
-                  YouTube
-                </a>
-              </li>
-              <li className="list-inline-item redes-items">
-                <a href="https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires">
-                  <i className="bx bxl-linkedin"></i>
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </section>
-        </div>
-        <hr className="divider" />
-        <div className="container">
-          <section className="footer-legal-section">
-            <div className="row align-items-center">
-              <div className="col-12 col-md-5 col-xl-4 footer-content-img mb-2">
-                <img
-                  className="d-lg-none"
-                  src="https://gcba.github.io/Obelisco/footer/ciudad-ba-sm.svg"
-                  alt="Ciudad de Buenos Aires"
-                  height="48"
-                />
-                <img
-                  className="d-none d-lg-inline"
-                  src="https://gcba.github.io/Obelisco/footer/ciudad-ba.svg"
-                  alt="Ciudad de Buenos Aires"
-                  height="40"
-                />
-                <img
-                  className="img-vamos-ba"
-                  src="https://gcba.github.io/Obelisco/footer/vamos-ba.svg"
-                  alt="Vamos Buenos Aires"
-                />
-              </div>
-            </div>
-          </section>
-          <section>
-            <div className="footer-license-text">
-              Los contenidos de buenosaires.gob.ar están licenciados bajo
-              Creative Commons Reconocimiento 2.5 Argentina License.
-            </div>
-          </section>
-        </div>
-      </footer> */}
     </>
   );
 }

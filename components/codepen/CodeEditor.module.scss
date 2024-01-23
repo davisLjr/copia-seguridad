@@ -1,82 +1,90 @@
-.codeEditorWrapper {
-  height: 34vh;
-  width: 100vw;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  overflow-y: scroll;
-  outline: none;
+.mainEditor {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 1.5rem;
 
-  .preStyle {
-    pre {
-      color: white !important;
-    }
-  }
-  /* Personalización de la barra de desplazamiento */
-  &::-webkit-scrollbar {
-    width: 8px;
-    background-color: #f5f5f5;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-}
-
-.mainResult {
-  .result {
+  .codeEditorWrapper {
+    height: 34vh;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background: white;
-    padding: 0rem;
-    height: 50vh;
-    margin-top: 12px;
     overflow-y: scroll;
-
-    &.expanded {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 9999;
-      border-radius: 0;
-      padding: 4rem 2rem;
-      box-shadow: none;
-      margin-top: 0;
-      background: white;
-      max-height: 100%;
-
-      .shut {
-        margin-top: -40px;
-        margin-bottom: 25px;
-        display: flex;
+    outline: none;
+    margin-bottom: 1rem;
+  
+    .preStyle {
+      pre {
+        color: white !important;
       }
     }
-
-    .shut {
-      display: none;
-    }
-
     /* Personalización de la barra de desplazamiento */
     &::-webkit-scrollbar {
       width: 8px;
       background-color: #f5f5f5;
     }
-
+  
     &::-webkit-scrollbar-thumb {
       background-color: #888;
       border-radius: 4px;
     }
-
+  
     &::-webkit-scrollbar-thumb:hover {
       background-color: #555;
     }
   }
+  
+  .mainResult {
+    .result {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background: white;
+      padding: 0rem;
+      height: 50vh;
+      margin-top: 1rem;
+      overflow-y: scroll;
+  
+      &.expanded {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        border-radius: 0;
+        padding: 4rem 2rem;
+        box-shadow: none;
+        margin-top: 0;
+        background: white;
+        max-height: 100%;
+  
+        .shut {
+          margin-top: -40px;
+          margin-bottom: 25px;
+          display: flex;
+        }
+      }
+  
+      .shut {
+        display: none;
+      }
+  
+      /* Personalización de la barra de desplazamiento */
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: #f5f5f5;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+      }
+  
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+    }
+  }
+
 }
 
-.mainEditor {
-  position: relative;
-}
+
+
