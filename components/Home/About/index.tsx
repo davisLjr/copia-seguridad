@@ -1,5 +1,5 @@
 import React from "react";
-import Panels from "../../Panels";
+import {Panels} from "../../Panels";
 
 export const AboutSection = () => {
   return (
@@ -14,6 +14,7 @@ export const AboutSection = () => {
         title="Colocar el HTML"
         description="El segundo paso sería colocar el HTML previamente copiado y usarlo en el editor en línea de esta página."
         imageSrc="/assets/about/step-2.png"
+        Reverse="flex-md-row-reverse"
       />
 
       <Panels

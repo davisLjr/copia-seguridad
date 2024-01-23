@@ -139,12 +139,14 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
       border-right: $border-size solid #ffdb2e;
       top: 0;
       left: 0;
+      z-index: 99999;
     }
 
     &:after {
       border-left: $border-size solid #007bc7;
       right: 0;
       bottom: 0;
+      z-index: 99999;
     }
 
     .hero-container {
@@ -194,6 +196,21 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
             max-width: 90%;
             margin: 0 auto;
             text-align: start;
+          }
+        }
+
+        // Animacion para textos
+        .text-fade {
+          animation: fadeIn 3.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
           }
         }
       }
@@ -416,7 +433,14 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
   width: 400px;
   margin: 0 auto;
   text-wrap: nowrap;
+
+  @media (max-width: $breakpoint) {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+  }
 }
+
 @keyframes noise-anim {
   $steps: 20;
   @for $i from 0 through $steps {
@@ -425,38 +449,41 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
     }
   }
 }
-.glitch:after {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  text-shadow: -1px 0 red;
-  top: 0;
-  color: white;
-  background: $dark-general;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 2s infinite linear alternate-reverse;
-}
 
-@keyframes noise-anim-2 {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+@media (min-width: $breakpoint) {
+  .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: white;
+    background: $dark-general;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+
+  @keyframes noise-anim-2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
     }
   }
-}
-.glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  left: -2px;
-  text-shadow: 1px 0 blue;
-  top: 0;
-  color: white;
-  background: $dark-general;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
+  .glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: white;
+    background: $dark-general;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+  }
 }
 
 .about-panels {
@@ -469,12 +496,6 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
 
     .card-body {
       color: white;
-    }
-
-    &:nth-of-type(2) {
-      .card-simple.panel-horizontal {
-        flex-direction: row-reverse;
-      }
     }
   }
 }

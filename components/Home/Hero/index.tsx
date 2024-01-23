@@ -7,8 +7,10 @@ export const Hero = () => {
         <div className="title-mask">
           <div className="hero-container">
             <div className="hero-title">
-              <h1>Te invito a Editor Obelisco</h1>
-              <p>
+              <h1 className="text-fade texto-visible">
+                Te invito a Editor Obelisco
+              </h1>
+              <p className="text-fade texto-visible">
                 En este sitio web podras probar los componentes de Obelisco e
                 interactuar con los mismos para usarlos posteriormente copiando
                 y pegando el codigo

@@ -6,7 +6,7 @@ import "prism-themes/themes/prism-dracula.css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import styles from "./CodeEditor.module.scss";
-import StorybookIframe from "../storybook-iframe";
+import {StorybookIframe} from "../storybook-iframe";
 
 export const CodeEditor: React.FC = () => {
   const [htmlCode, setHtmlCode] = useState("");
