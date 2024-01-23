@@ -6,9 +6,6 @@ class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head>
-          {/* Coloca aquí las fuentes y estilos de iconos que necesites */}
-          <title>Editor Obelisco</title>
-
           <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
             rel="stylesheet"
