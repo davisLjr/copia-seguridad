@@ -14,7 +14,7 @@ export const AboutSection = () => {
         title="Colocar el HTML"
         description="El segundo paso sería colocar el HTML previamente copiado y usarlo en el editor en línea de esta página."
         imageSrc="/assets/about/step-2.png"
-        Reverse="flex-md-row-reverse"
+        isReverse={true}
       />
 
       <Panels

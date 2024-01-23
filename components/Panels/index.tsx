@@ -4,19 +4,23 @@ interface PanelsProps {
   title: string;
   description: string;
   imageSrc: string;
-  Reverse?: string;
+  isReverse?: boolean;
 }
 
 export const Panels: FC<PanelsProps> = ({
   title,
   description,
   imageSrc,
-  Reverse,
+  isReverse,
 }) => {
   return (
     <>
       <div className="panel-horizontal-content">
-        <div className={`card card-simple panel-horizontal ${Reverse}`}>
+        <div
+          className={`card card-simple panel-horizontal ${
+            isReverse ? "flex-md-row-reverse" : ""
+          }`}
+        >
           <img
             src={imageSrc}
             alt="descripción de imagen"
