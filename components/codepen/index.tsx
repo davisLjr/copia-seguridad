@@ -8,7 +8,7 @@ import "prismjs/components/prism-javascript";
 import styles from "./CodeEditor.module.scss";
 import StorybookIframe from "../storybook-iframe";
 
-const CodeEditor: React.FC = () => {
+export const CodeEditor: React.FC = () => {
   const [htmlCode, setHtmlCode] = useState("");
   const [cssCode, setCssCode] = useState("");
   const [iframeCode, setIframeCode] = useState("");
@@ -173,5 +173,3 @@ const CodeEditor: React.FC = () => {
     </div>
   );
 };
-
-export default CodeEditor;

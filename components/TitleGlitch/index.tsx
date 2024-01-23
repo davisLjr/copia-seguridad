@@ -4,7 +4,7 @@ interface TitleProps {
   title: string;
 }
 
-const TitleGlitch: React.FC<TitleProps> = ({title}) => {
+export const TitleGlitch: React.FC<TitleProps> = ({title}) => {
   return (
     <div className="about-title">
       <div className="glitch" data-text={title}>
@@ -13,5 +13,3 @@ const TitleGlitch: React.FC<TitleProps> = ({title}) => {
     </div>
   );
 };
-
-export default TitleGlitch;

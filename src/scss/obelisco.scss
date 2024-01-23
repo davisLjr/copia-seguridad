@@ -1,26 +1,34 @@
-@import '~@gcba/obelisco/dist/obelisco.css';
+@import "~@gcba/obelisco/dist/obelisco.css";
 
 $breakpoint: 1100px;
 
 $dark-general: #131417;
 
-body, html {
+* {
+  -webkit-user-drag: none; /* Safari */
+  -webkit-user-select: none; /* Safari, Chrome, Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Estandar*/
+}
+body,
+html {
   background: $dark-general;
 
   ::-webkit-scrollbar {
     width: 10px; /* Ancho del scrollbar vertical */
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background-color: $dark-general; /* Color del thumb del scrollbar */
   }
-  
+
   /* Para navegadores Firefox */
   scrollbar-width: thin;
   scrollbar-color: $dark-general;
 }
 
-//SECCION HEADER: 
+//SECCION HEADER:
 
 header {
   position: absolute;
@@ -51,7 +59,7 @@ header {
   }
 }
 
-//SECCION HERO: 
+//SECCION HERO:
 
 $starting-delay: 500ms;
 $reveal-borders-time: 400ms;
@@ -63,30 +71,30 @@ $content-height: 100%;
 $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
 
 @keyframes reveal-mask {
-    from {
-      max-width: 1em + $border-size;
-    }
-    to {
-      max-width: 50e;
-    }
+  from {
+    max-width: 1em + $border-size;
+  }
+  to {
+    max-width: 50e;
+  }
 }
 
 @keyframes reveal-content {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes grow-height {
-    from {
-      height: 0;
-    }
-    to { 
-      height: 100%;
-    }
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 .title {
@@ -96,11 +104,11 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
     height: 100dvh;
     margin-bottom: 80px;
   }
-  
+
   &-mask {
     animation-name: reveal-mask;
     animation-duration: $open-mask-time;
-    animation-timing-function: $timing-function; 
+    animation-timing-function: $timing-function;
     animation-delay: $starting-delay + $reveal-borders-time;
     animation-fill-mode: both;
     transition: background 300ms $timing-function;
@@ -112,13 +120,13 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
     transform: skew(-$skew);
     cursor: pointer;
     background: white;
-    
-    
-    &:before, &:after {
+
+    &:before,
+    &:after {
       animation-name: grow-height;
       animation-duration: $reveal-borders-time;
       animation-timing-function: $timing-function;
-      animation-delay: $starting-delay; 
+      animation-delay: $starting-delay;
       animation-fill-mode: both;
       content: "";
       display: block;
@@ -126,13 +134,13 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
       height: 100%;
       z-index: 1;
     }
-    
+
     &:before {
       border-right: $border-size solid #ffdb2e;
       top: 0;
       left: 0;
     }
-    
+
     &:after {
       border-left: $border-size solid #007bc7;
       right: 0;
@@ -150,7 +158,7 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
         padding-left: 6rem;
         padding-bottom: 8rem;
 
-        @media (max-width: $breakpoint){
+        @media (max-width: $breakpoint) {
           width: 100%;
           min-width: 100%;
           height: 100%;
@@ -214,7 +222,7 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
           position: fixed;
           top: 0;
           left: 0;
-          opacity: .4;
+          opacity: 0.4;
           position: absolute;
           top: 3%;
           left: 10%;
@@ -228,23 +236,23 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
           animation: drift 7000ms infinite linear;
           overflow-y: hidden;
         }
-        
+
         .wave.-three {
           animation: drift 7500ms infinite linear;
           position: fixed;
           background-color: #ffdb2e;
-          opacity: .7;
+          opacity: 0.7;
         }
-        
+
         .wave.-two {
           animation: drift 3000ms infinite linear;
-          opacity: .2;
+          opacity: 0.2;
           background: #38485c;
           position: fixed;
         }
-        
+
         .box:after {
-          content: '';
+          content: "";
           display: block;
           left: 0;
           top: 0;
@@ -253,14 +261,18 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
           z-index: 11;
           transform: translate3d(0, 0, 0);
         }
-        
+
         @keyframes drift {
-          from { transform: rotate(0deg); }
-          from { transform: rotate(360deg); }
+          from {
+            transform: rotate(0deg);
+          }
+          from {
+            transform: rotate(360deg);
+          }
         }
-        
+
         /*LOADING SPACE*/
-        
+
         .contain {
           animation-delay: 4s;
           z-index: 1000;
@@ -280,64 +292,82 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-        
+
           background: #25a7d7;
-          background: -webkit-linear-gradient(#25a7d7, #2962FF);
+          background: -webkit-linear-gradient(#25a7d7, #2962ff);
           background: linear-gradient(#25a7d7, #25a7d7);
         }
-        
+
         .icon {
           width: 100px;
           height: 100px;
           margin: 0 5px;
         }
-        
+
         /*Animation*/
-        .icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
-        .icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
-        .icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
-        
+        .icon:nth-child(2) img {
+          -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+        }
+        .icon:nth-child(3) img {
+          -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+        }
+        .icon:nth-child(4) img {
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+
         .icon img {
           -webkit-animation: anim 2s ease infinite;
           animation: anim 2s ease infinite;
-          -webkit-transform: scale(0,0) rotateZ(180deg);
-          transform: scale(0,0) rotateZ(180deg);
+          -webkit-transform: scale(0, 0) rotateZ(180deg);
+          transform: scale(0, 0) rotateZ(180deg);
         }
-        
-        @-webkit-keyframes anim{
+
+        @-webkit-keyframes anim {
           0% {
-            -webkit-transform: scale(0,0) rotateZ(-90deg);
-            transform: scale(0,0) rotateZ(-90deg);opacity:0
+            -webkit-transform: scale(0, 0) rotateZ(-90deg);
+            transform: scale(0, 0) rotateZ(-90deg);
+            opacity: 0;
           }
           30% {
-            -webkit-transform: scale(1,1) rotateZ(0deg);
-            transform: scale(1,1) rotateZ(0deg);opacity:1
+            -webkit-transform: scale(1, 1) rotateZ(0deg);
+            transform: scale(1, 1) rotateZ(0deg);
+            opacity: 1;
           }
           50% {
-            -webkit-transform: scale(1,1) rotateZ(0deg);
-            transform: scale(1,1) rotateZ(0deg);opacity:1
+            -webkit-transform: scale(1, 1) rotateZ(0deg);
+            transform: scale(1, 1) rotateZ(0deg);
+            opacity: 1;
           }
           80% {
-            -webkit-transform: scale(0,0) rotateZ(90deg);
-            transform: scale(0,0) rotateZ(90deg);opacity:0
+            -webkit-transform: scale(0, 0) rotateZ(90deg);
+            transform: scale(0, 0) rotateZ(90deg);
+            opacity: 0;
           }
         }
-        
-        @keyframes anim{
+
+        @keyframes anim {
           0% {
-            -webkit-transform: scale(0,0) rotateZ(-90deg);
-            transform: scale(0,0) rotateZ(-90deg);opacity:0
+            -webkit-transform: scale(0, 0) rotateZ(-90deg);
+            transform: scale(0, 0) rotateZ(-90deg);
+            opacity: 0;
           }
           30% {
-            -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+            -webkit-transform: scale(1, 1) rotateZ(0deg);
+            transform: scale(1, 1) rotateZ(0deg);
+            opacity: 1;
           }
           50% {
-            -webkit-transform: scale(1,1) rotateZ(0deg);
-            transform: scale(1,1) rotateZ(0deg);opacity:1
+            -webkit-transform: scale(1, 1) rotateZ(0deg);
+            transform: scale(1, 1) rotateZ(0deg);
+            opacity: 1;
           }
           80% {
-            -webkit-transform: scale(0,0) rotateZ(90deg);
-            transform: scale(0,0) rotateZ(90deg);opacity:0
+            -webkit-transform: scale(0, 0) rotateZ(90deg);
+            transform: scale(0, 0) rotateZ(90deg);
+            opacity: 0;
           }
         }
       }
@@ -365,7 +395,7 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
     transform: translate(-50%, -50%);
     text-transform: uppercase;
   }
-  
+
   &-highlight {
     font-weight: bold;
     font-size: 1.3em;
@@ -373,79 +403,78 @@ $timing-function: cubic-bezier(0.14, 0.87, 0.05, 0.95);
   }
 }
 
-
 // SECCION ABOUT
 
-  .about-panels {
-    margin-bottom: 80px;
-  }
+.about-panels {
+  margin-bottom: 80px;
+}
 
-  .glitch{
-    color:white;
-    font-size:60px;
-    position:relative;
-    width: 400px;
-    margin: 0 auto;
-    text-wrap: nowrap;
+.glitch {
+  color: white;
+  font-size: 60px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  text-wrap: nowrap;
+}
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
   }
-  @keyframes noise-anim{
-    $steps:20;
-    @for $i from 0 through $steps{
-      #{percentage($i*(1/$steps))}{
-        clip:rect(random(100)+px,9999px,random(100)+px,0);
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: $dark-general;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: $dark-general;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.about-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .panel-horizontal-content {
+    background: none;
+
+    .card-body {
+      color: white;
+    }
+
+    &:nth-of-type(2) {
+      .card-simple.panel-horizontal {
+        flex-direction: row-reverse;
       }
     }
   }
-  .glitch:after{
-    content:attr(data-text);
-    position:absolute;
-    left:2px;
-    text-shadow:-1px 0 red;
-    top:0;
-    color:white;
-    background: $dark-general;
-    overflow:hidden;
-    clip:rect(0,900px,0,0); 
-    animation:noise-anim 2s infinite linear alternate-reverse;
-  }
-
-  @keyframes noise-anim-2{
-    $steps:20;
-    @for $i from 0 through $steps{
-      #{percentage($i*(1/$steps))}{
-        clip:rect(random(100)+px,9999px,random(100)+px,0);
-      }
-    }
-  }
-  .glitch:before{
-    content:attr(data-text);
-    position:absolute;
-    left:-2px;
-    text-shadow:1px 0 blue; 
-    top:0;
-    color:white;
-    background: $dark-general;
-    overflow:hidden;
-    clip:rect(0,900px,0,0); 
-    animation:noise-anim-2 3s infinite linear alternate-reverse;
-  }
-
-  .about-panels {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    .panel-horizontal-content {
-      background: none;
-
-      .card-body {
-        color: white;
-      }
-
-      &:nth-of-type(2) {
-        .card-simple.panel-horizontal {
-          flex-direction: row-reverse;
-        }
-      }
-    }
-  }
+}

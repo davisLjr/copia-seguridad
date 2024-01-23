@@ -22,10 +22,6 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-          {/* <h1 className="title-content">
-            <span className="title-highlight">Lorem ipsum</span>
-            <span className="title-highlight">congue</span>
-          </h1> */}
         </div>
       </div>
     </>
