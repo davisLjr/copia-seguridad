@@ -6,7 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@gcba/obelisco": "^1.56.1",
+    "@gcba/obelisco": "^1.57.1",
     "copy-to-clipboard": "^3.3.3",
     "dracula-prism": "^2.1.13",
     "material-icons": "^1.13.9",
@@ -19,7 +19,7 @@
     "react-simple-code-editor": "^0.13.1",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.3",
-    "react-typed": "^1.2.0",
+    "react-typed": "^2.0.8",
     "sass": "1.26.3",
     "slick-carousel": "^1.8.1"
   },
