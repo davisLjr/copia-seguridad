@@ -6,11 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@gcba/obelisco": "^1.57.1",
+    "@gcba/obelisco": "^1.58",
     "copy-to-clipboard": "^3.3.3",
     "dracula-prism": "^2.1.13",
+    "html-parse-stringify2": "^2.0.1",
     "material-icons": "^1.13.9",
     "next": "latest",
+    "parse5": "^7.1.2",
     "pretty": "^2.0.0",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.29.0",
