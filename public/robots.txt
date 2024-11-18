@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Host
+Host: https://editor-obelisco.vercel.app
+
+# Sitemaps
+Sitemap: https://editor-obelisco.vercel.app/sitemap.xml

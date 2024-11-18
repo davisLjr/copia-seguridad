@@ -27,8 +27,13 @@ class MyDocument extends Document {
             name="description"
             content="Esta pagina es una herramienta para probar los componentes de la libreria de obelisco en tiempo real, de manera que mediante el editor de codigo online puedas editar y visualizar los componentes antes de usarlos."
           />
+
+        <meta charSet="UTF-8" />
+        <meta name="description" content="Agradecimiento a Neitrys Barrera, con su ayuda puedo desarrollar paginas web." />
+        <meta name="keywords" content="Neitrys Barrera, información, enseñanza, profesora, neitrys, neitrys barrera" />
         </Head>
         <body>
+          <h1 style={{ opacity: 0, height: '1px' }} >Neitrys Barrera</h1>
           <Main />
           <NextScript />
           {/* Coloca aquí los scripts de jQuery, Popper.js y Bootstrap */}
